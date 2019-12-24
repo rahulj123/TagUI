@@ -664,7 +664,7 @@ if %file_size% gtr 0 if %tagui_upload_result%==true (
 rem set flow_file to blank or the variable will break that tagui call
 	set "tmp_flow_file=%flow_file%"
 	set flow_file=
-	tagui samples\8_hastebin quiet "!tmp_flow_file!"
+	tagui samples\08-hastebin quiet "!tmp_flow_file!"
 )
 
 rem remove logs if tagui_logging doesn't exist
