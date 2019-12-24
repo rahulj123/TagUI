@@ -2,7 +2,7 @@ https://ca.yahoo.com
 // visits the webpage
 
 type search-box as github
-// looks on the web page for an element with 'search-box' in their 
+// looks on the web page for an element with 'search-box' in its
 // text, id or name (or some other attributes) and then types 'github' into it
 
 click search-button
