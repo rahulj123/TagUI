@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; TagUI 6.0.0 documentation</title>
+  <title>Deprecated command line options &mdash; TagUI 6.0.0 documentation</title>
   
 
   
@@ -34,7 +33,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
@@ -84,9 +83,6 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Download and Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">TagUI Chrome Extension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html#tagui-writer-screenshoter-editor">TagUI Writer, Screenshoter &amp; Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html#tagui-for-python">TagUI For Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -133,12 +129,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li>Deprecated command line options</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/dep_options.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -150,11 +148,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="deprecated-command-line-options">
+<span id="my-reference-label"></span><h1>Deprecated command line options<a class="headerlink" href="#deprecated-command-line-options" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>chrome</dt><dd><p>run on visible Chrome web browser instead of invisible PhantomJS (first install [Chrome](<a class="reference external" href="https://www.google.com/chrome/">https://www.google.com/chrome/</a>))</p>
+</dd>
+<dt>firefox</dt><dd><p>run on visible Firefox web browser instead of invisible browser (first install [Firefox](<a class="reference external" href="https://ftp.mozilla.org/pub/firefox/releases/59.0/">https://ftp.mozilla.org/pub/firefox/releases/59.0/</a>))</p>
+</dd>
+<dt>upload</dt><dd><p>upload automation flow and result to [hastebin.com](<a class="reference external" href="https://hastebin.com">https://hastebin.com</a>) (expires 30 days after last view)</p>
+</dd>
+<dt>quiet</dt><dd><p>run without output except for explicit output (echo / show / check / errors etc)</p>
+</dd>
+<dt>debug</dt><dd><p>show run-time backend messages from PhantomJS mode for detailed tracing and logging</p>
+</dd>
+<dt>test</dt><dd><p>testing with check step test assertions for CI/CD integration (output XUnit XML file)</p>
+</dd>
+<dt>baseline</dt><dd><p>output execution log and relative-path output files to a separate baseline directory</p>
+</dd>
+</dl>
 </div>
 
 

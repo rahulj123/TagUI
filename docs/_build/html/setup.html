@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setup &mdash; TagUI 6.0.0 documentation</title>
+  <title>Download and Setup &mdash; TagUI 6.0.0 documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="Features" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -78,20 +80,21 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Setup</a><ul>
-<li><a class="reference internal" href="#macos">macOS</a></li>
-<li><a class="reference internal" href="#linux">Linux</a></li>
-<li><a class="reference internal" href="#windows">Windows</a></li>
-<li><a class="reference internal" href="#node-js-macos-linux">Node.js (macOS/Linux)</a><ul>
-<li><a class="reference internal" href="#cutting-edge-version">Cutting Edge Version</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Download and Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-setup">Recommended setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-your-first-flow">Running your first flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#npm-installation">npm installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cutting-edge-version">Cutting edge version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
-</li>
-</ul>
-</div>
+
             
           
         </div>
@@ -135,7 +138,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Setup</li>
+      <li>Download and Setup</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,32 +157,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>TagUI is in v5.11 - it unzips and runs directly on Windows, macOS, Linux (<a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases">link to release notes</a>).</p>
+  <div class="section" id="download-and-setup">
+<h1>Download and Setup<a class="headerlink" href="#download-and-setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="recommended-setup">
+<h2>Recommended setup<a class="headerlink" href="#recommended-setup" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Install OpenJDK v8 (64-bit) or later</p></li>
-<li><p>Avoid spaces in the folder path of TagUI</p></li>
+<li><p>Download TagUI v6.0.0 for:</p></li>
 </ol>
-<div class="section" id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_macOS.zip">unzip and run</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Windows.zip">Windows</a></p></li>
+<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_macOS.zip">macOS</a></p></li>
+<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Linux.zip">Linux</a></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Unzip to <code class="docutils literal notranslate"><span class="pre">C:\</span></code> on Windows, or your desktop on macOS, or <code class="docutils literal notranslate"><span class="pre">/home/your_userid</span></code> on Linux.</p></li>
+<li><p><a class="reference external" href="https://www.java.com/en/download/">Install Java</a> (if not yet installed).</p></li>
+<li><p><a class="reference external" href="https://www.google.com/chrome/">Install Chrome</a> (if not yet installed).</p></li>
+<li><p>To make the <code class="docutils literal notranslate"><span class="pre">tagui</span></code> command always available:</p></li>
+</ol>
+<ul class="simple">
+<li><p>For macOS/Linux, run <code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span> <span class="pre">/your_tagui_path/tagui/src/tagui</span> <span class="pre">/usr/local/bin/tagui</span></code> in Terminal.</p></li>
+<li><p>For Windows, run <code class="docutils literal notranslate"><span class="pre">setx</span> <span class="pre">path</span> <span class="pre">&quot;%path%;c:\tagui\src&quot;</span></code> in Command Prompt.</p></li>
+</ul>
 </div>
-<div class="section" id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Linux.zip">unzip and run</a></p>
+<div class="section" id="running-your-first-flow">
+<h2>Running your first flow<a class="headerlink" href="#running-your-first-flow" title="Permalink to this headline">¶</a></h2>
+<p>On Windows, run this in Command Prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tagui</span> <span class="n">c</span><span class="p">:</span>\<span class="n">tagui</span>\<span class="n">src</span>\<span class="n">samples</span>\<span class="mi">1</span><span class="n">_yahoo</span> <span class="n">chrome</span>
+</pre></div>
 </div>
-<div class="section" id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Windows.zip">unzip and run</a></p>
+<p>On macOS/Linux, run this in Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">tagui</span> <span class="n">your_tagui_path</span>\<span class="n">tagui</span>\<span class="n">src</span>\<span class="n">samples</span>\<span class="mi">1</span><span class="n">_yahoo</span> <span class="n">chrome</span>
+</pre></div>
 </div>
-<div class="section" id="node-js-macos-linux">
-<h2>Node.js (macOS/Linux)<a class="headerlink" href="#node-js-macos-linux" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.npmjs.com/package/tagui">npm install tagui</a></p>
+<p>Congratulations, you have run your first TagUI flow!</p>
+</div>
+<div class="section" id="npm-installation">
+<h2>npm installation<a class="headerlink" href="#npm-installation" title="Permalink to this headline">¶</a></h2>
+<p>Alternatively, you can install TagUI via npm:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="n">tagui</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="cutting-edge-version">
-<h3>Cutting Edge Version<a class="headerlink" href="#cutting-edge-version" title="Permalink to this headline">¶</a></h3>
-<p>To use the latest features and fixes, <a class="reference external" href="https://github.com/kelaberetiv/TagUI/archive/develop.zip">download the cutting edge version</a> and overwrite the packaged installation.</p>
+<h2>Cutting edge version<a class="headerlink" href="#cutting-edge-version" title="Permalink to this headline">¶</a></h2>
+<p>To use the latest features and fixes, first download TagUI with the recommended setup above, then <a class="reference external" href="https://github.com/kelaberetiv/TagUI/archive/develop.zip">download the cutting edge version</a> and overwrite the files in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
 </div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>If you see ‘MSVCR110.dll is missing’ error, <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=30679">install this from Microsoft website</a> (choose vcredist_x86.exe) - this file is required to run the Windows PHP engine packaged with TagUI. Some IT policies restrict TagUI from writing to c:tagui and working properly, in that case please unzip to user desktop folder.</p></li>
+<li><p>For newer macOS versions, if you get a ‘dyld: Library not loaded’ error, <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/86">install OpenSSL in this way</a>. macOS Catalina update has introduced tighter security controls, see solutions for the <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/601">PhantomJS</a> and <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/598">Java popups</a>.</p></li>
+<li><p>For some flavours of Linux (Ubuntu for example) which do not have PHP pre-installed, google how to install PHP accordingly (eg Ubuntu, apt-get install php). Most Linux distributions would already come with PHP.</p></li>
+<li><p>If you Ctrl+C to break a TagUI automation, you can use tagui/src/end_processes command (for macOS/Linux) or end_processes.cmd (for Windows) to kill any dead processes of TagUI integrations (Chrome, SikuliX, Python etc)</p></li>
+</ul>
 </div>
 </div>
 
@@ -188,6 +219,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
