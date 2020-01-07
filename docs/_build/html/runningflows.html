@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage &mdash; TagUI 6.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Writing Flows" href="writingflows.html" />
+    <link rel="prev" title="Download and Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TagUI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Download and Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running flows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-flows-with-options">Running flows with options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-flows-as-desktop-icons">Running flows as desktop icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-log-files-for-debugging">Create log files for debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-flows-on-a-fixed-schedule">Running flows on a fixed schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-flows">Sample flows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storing-run-results">Storing run results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="writingflows.html">Writing flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Helper tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How it works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TagUI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/runningflows.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="running-flows-with-options">
+<h2>Running flows with options<a class="headerlink" href="#running-flows-with-options" title="Permalink to this headline">¶</a></h2>
+<p>You can use the below options when running <code class="docutils literal notranslate"><span class="pre">tagui</span></code>.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">tagui</span> <span class="pre">my_flow.tag</span> <span class="pre">headless</span> <span class="pre">report</span></code> runs <code class="docutils literal notranslate"><span class="pre">my_flow.tag</span></code> without showing the web browser, while storing the flow run result in <code class="docutils literal notranslate"><span class="pre">tagui_report.csv</span></code>.</p>
+<dl class="simple">
+<dt>headless</dt><dd><p>Runs the flow without a visible browser (does not work for visual automation).</p>
+</dd>
+<dt>report</dt><dd><p>Tracks flow run result in <code class="docutils literal notranslate"><span class="pre">tagui/src/tagui_report.csv</span></code> and saves html log of automation execution.</p>
+</dd>
+<dt>my_datatable.csv</dt><dd><p>Uses the specified csv file as the datatable for batch automation of many records.</p>
+</dd>
+<dt>speed</dt><dd><p>Runs a datatable flow, skipping the default 3s delay and restarting of Chrome between datatable iterations.</p>
+</dd>
+</dl>
+<p>See <a class="reference internal" href="dep_options.html"><span class="doc">other deprecated options</span></a>.</p>
+</div>
+<div class="section" id="running-flows-as-desktop-icons">
+<h2>Running flows as desktop icons<a class="headerlink" href="#running-flows-as-desktop-icons" title="Permalink to this headline">¶</a></h2>
+<p>To do that on Windows, create a .cmd or .bat file with contents like the following, which goes to the directory where you want to run the automation, and run tagui command on the file with your specified options. Double-clicking the .cmd or .bat file will start automation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@echo</span> <span class="n">off</span>
+<span class="n">c</span><span class="p">:</span>
+<span class="n">cd</span> <span class="n">c</span><span class="p">:</span>\<span class="n">folder</span>
+<span class="n">tagui</span> <span class="n">filename</span> <span class="n">quiet</span> <span class="n">speed</span> <span class="n">chrome</span>
+</pre></div>
+</div>
+<p>To do that on macOS / Linux, create a file with contents like the following, which goes to the directory where you want to run the automation, and run tagui command on the file with your specified options. You will need to use the command chmod 700 on the file to give it execute permissions, so that it can be run by double-clicking on it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">folder</span>
+<span class="n">tagui</span> <span class="n">filename</span> <span class="n">quiet</span> <span class="n">speed</span> <span class="n">chrome</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-log-files-for-debugging">
+<h2>Create log files for debugging<a class="headerlink" href="#create-log-files-for-debugging" title="Permalink to this headline">¶</a></h2>
+<p>To create log files create an empty file <cite>tagui_logging</cite> in tagui/src folder.</p>
+<p>After each automation run, a .log file will be created to store output of the execution, a .js file is the generated JavaScript file, a .raw is the expanded flow after reading in any module sub-scripts that are called in that flow.</p>
+</div>
+<div class="section" id="running-flows-on-a-fixed-schedule">
+<h2>Running flows on a fixed schedule<a class="headerlink" href="#running-flows-on-a-fixed-schedule" title="Permalink to this headline">¶</a></h2>
+<p>To schedule an automation flow with crontab (for macOS/Linux), for example at 8am daily</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">8</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">full_path</span><span class="o">/</span><span class="n">tagui</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">tagui</span> <span class="n">flow_filename</span> <span class="n">option</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For Windows, use Task Scheduler (search schedule from Start Menu) or something like [Z-Cron](<a class="reference external" href="https://www.z-cron.com">https://www.z-cron.com</a>)</p>
+</div>
+<div class="section" id="sample-flows">
+<h2>Sample flows<a class="headerlink" href="#sample-flows" title="Permalink to this headline">¶</a></h2>
+<p>TagUI includes the following automation flow samples ([tagui/src/samples folder](<a class="reference external" href="https://github.com/kelaberetiv/TagUI/tree/master/src/samples">https://github.com/kelaberetiv/TagUI/tree/master/src/samples</a>))</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Flow Sample</p></td>
+<td><p>Purpose</p></td>
+</tr>
+<tr class="row-even"><td><p>1_yahoo</p></td>
+<td><p>searches github on Yahoo and captures screenshot of results</p></td>
+</tr>
+<tr class="row-odd"><td><p>2_twitter</p></td>
+<td><p>goes to a Twitter page and saves some profile information</p></td>
+</tr>
+<tr class="row-even"><td><p>3_github</p></td>
+<td><p>goes to a GitHub page and downloads the repository file</p></td>
+</tr>
+<tr class="row-odd"><td><p>4_conditions</p></td>
+<td><p>goes through examples of using conditions in natural language</p></td>
+</tr>
+<tr class="row-even"><td><p>5_repositories</p></td>
+<td><p>shows using repositories on Russian social media site VK.com</p></td>
+</tr>
+<tr class="row-odd"><td><p>6_datatables</p></td>
+<td><p>set of flows uses datatables to retrieve and act on GitHub info</p></td>
+</tr>
+<tr class="row-even"><td><p>7_testing</p></td>
+<td><p>shows how to use check step assertions for CI/CD integration</p></td>
+</tr>
+<tr class="row-odd"><td><p>8_hastebin</p></td>
+<td><p>used by upload option to upload flow result to hastebin.com</p></td>
+</tr>
+<tr class="row-even"><td><p>9_misc</p></td>
+<td><p>shows how to use steps popup, frame, dom, js, { and } block</p></td>
+</tr>
+<tr class="row-odd"><td><p>a_facedetect</p></td>
+<td><p>uses face recognition to detect profile images on webpages</p></td>
+</tr>
+<tr class="row-even"><td><p>b_visualoutlook</p></td>
+<td><p>uses visual recognition for desktop MS Outlook email sending</p></td>
+</tr>
+<tr class="row-odd"><td><p>c_chineseflow</p></td>
+<td><p>run flow in other languages (first, change src/tagui_config.txt)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="storing-run-results">
+<h2>Storing run results<a class="headerlink" href="#storing-run-results" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>when the <code class="docutils literal notranslate"><span class="pre">report</span></code> option is used, TagUI will save run results to tagui/src/tagui_report.csv</p></li>
+<li><p>this can be useful for audit, personal tracking or measuring time savings</p></li>
+<li><p>html logs will also be generated to store the full execution sequences and outcomes</p></li>
+</ul>
+<p>#|AUTOMATION FLOW|START TIME|FINISH TIME|ERROR STATUS|LOG FILE
+:-<a href="#id3"><span class="problematic" id="id4">|:--------------|</span></a>:———<a href="#id5"><span class="problematic" id="id6">|:----------|</span></a>:———–<a href="#id1"><span class="problematic" id="id2">|</span></a>:——-
+1 | /Users/kensoh/Desktop/download_flow | Sun Apr 07 2019 17:33:58 GMT+0800 (+08) | 32.1 | SUCCESS | /Users/kensoh/Desktop/download_flow_1.html
+2 | /Users/kensoh/Desktop/upload_flow | NOT STARTED | NOT FINISHED | [LINE 1] cannot understand step self-destruct | /Users/kensoh/Desktop/upload_flow_2.html
+3 | /Users/kensoh/Desktop/update_flow | NOT STARTED | NOT FINISHED | [LINE 1] cannot understand step reboot computer | /Users/kensoh/Desktop/update_flow_3.html
+4 | /Users/kensoh/Desktop/booking_flow | Sun Apr 07 2019 17:39:00 GMT+0800 (+08) | NOT FINISHED | cannot find confirm_booking | /Users/kensoh/Desktop/booking_flow_4.html</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="writingflows.html" class="btn btn-neutral float-right" title="Writing Flows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="setup.html" class="btn btn-neutral float-left" title="Download and Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ken Soh, Siow Yi Sheng
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

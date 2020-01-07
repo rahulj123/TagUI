@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How It Works &mdash; TagUI 6.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="Helper Tools" href="tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TagUI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Download and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningflows.html">Running flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writingflows.html">Writing flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Helper tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How it works</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-diagram">Architecture diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-files">Description of files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TagUI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>How It Works</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/howitworks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-it-works">
+<h1>How It Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="architecture-diagram">
+<h2>Architecture diagram<a class="headerlink" href="#architecture-diagram" title="Permalink to this headline">¶</a></h2>
+<p>![TagUI Flowchart](<a class="reference external" href="https://raw.githubusercontent.com/kelaberetiv/TagUI/master/src/media/flowchart.png">https://raw.githubusercontent.com/kelaberetiv/TagUI/master/src/media/flowchart.png</a>)</p>
+</div>
+<div class="section" id="description-of-files">
+<h2>Description of files<a class="headerlink" href="#description-of-files" title="Permalink to this headline">¶</a></h2>
+<p>Core Files|Purpose
+:———<a href="#id1"><span class="problematic" id="id2">|:------
+tagui|main runner for TagUI automation
+tagui.cmd|main runner for Windows platform
+tagui_config.txt|web browser settings used for automation
+tagui_parse.php|to interpret natural language into code
+tagui_header.js|template for CasperJS / integrations code
+tagui_footer.js|template for CasperJS / integrations code
+test/positive_test|TagUI's interpretation positive test cases
+test/positive_test.signature|</span></a>.js signature for positive test cases</p>
+<div class="line-block">
+<div class="line">Multi-Language      | Purpose                                   |</div>
+<div class="line">:—————— | :—————————————- |</div>
+<div class="line">translate.php       | translation engine for native languages   |</div>
+<div class="line">translate.log       | translation in English reference language |</div>
+<div class="line">languages/build     | script to self-build language definitions |</div>
+<div class="line">languages/build.csv | default languages to be self-built        |</div>
+</div>
+<div class="line-block">
+<div class="line">Chrome Integration | Purpose                                   |</div>
+<div class="line">:—————– | :—————————————- |</div>
+<div class="line">tagui_chrome.php   | PHP thread for Chrome integration         |</div>
+<div class="line">tagui_chrome.log   | log for Chrome websocket transactions     |</div>
+<div class="line">tagui_chrome.in    | interface in-file for Chrome integration  |</div>
+<div class="line">tagui_chrome.out   | interface out-file for Chrome integration |</div>
+</div>
+<div class="line-block">
+<div class="line">SikuliX Integration | Purpose                                    |</div>
+<div class="line">:—————— | :—————————————– |</div>
+<div class="line">tagui.py            | interface for SikuliX visual automation    |</div>
+<div class="line">tagui.log           | log for SikuliX Python transactions        |</div>
+<div class="line">tagui_windows.log   | same as above but for Windows              |</div>
+<div class="line">tagui_sikuli.in     | interface in-file for SikuliX integration  |</div>
+<div class="line">tagui_sikuli.out    | interface out-file for SikuliX integration |</div>
+<div class="line">tagui_sikuli.txt    | Tesseract OCR integration interface file   |</div>
+</div>
+<div class="line-block">
+<div class="line">Python Integration   | Purpose                                   |</div>
+<div class="line">:——————- | :—————————————- |</div>
+<div class="line">tagui_py.py          | interface for Python integration          |</div>
+<div class="line">tagui_py.log         | log for Python platform transactions      |</div>
+<div class="line">tagui_py_windows.log | same as above but for Windows             |</div>
+<div class="line">tagui_py.in          | interface in-file for Python integration  |</div>
+<div class="line">tagui_py.out         | interface out-file for Python integration |</div>
+<div class="line">tagui_py.txt         | integration file for storing output       |</div>
+</div>
+<div class="line-block">
+<div class="line">R Integration       | Purpose                              |</div>
+<div class="line">:—————— | :———————————– |</div>
+<div class="line">tagui_r.R           | interface for R integration          |</div>
+<div class="line">tagui_r.log         | log for R platform transactions      |</div>
+<div class="line">tagui_r_windows.log | same as above but for Windows        |</div>
+<div class="line">tagui_r.in          | interface in-file for R integration  |</div>
+<div class="line">tagui_r.out         | interface out-file for R integration |</div>
+<div class="line">tagui_r.txt         | integration file for storing output  |</div>
+</div>
+<div class="line-block">
+<div class="line">API Service        | Purpose                                   |</div>
+<div class="line">:—————– | :—————————————- |</div>
+<div class="line">tagui_crontab      | to run service request batch from crontab |</div>
+<div class="line">tagui_runner.php   | retrieving service requests from queue    |</div>
+<div class="line">tagui_service.php  | receiving service requests into queue     |</div>
+<div class="line">tagui_service.log  | log to track service requests history     |</div>
+<div class="line">tagui_service.in   | log to track incoming service requests    |</div>
+<div class="line">tagui_service.out  | log to track processed service requests   |</div>
+<div class="line">tagui_service.act  | service request batch ready to execute    |</div>
+<div class="line">tagui_service.run  | service request batch currently running   |</div>
+<div class="line">tagui_service.done | service request batch finished running    |</div>
+</div>
+<div class="line-block">
+<div class="line">CLI Assistant    | Purpose                                |</div>
+<div class="line">:————— | :————————————- |</div>
+<div class="line">erina            | natural language command line helper   |</div>
+<div class="line">erina.cmd        | same as above but for Windows platform |</div>
+<div class="line">tagui_helper.php | command line natural language parser   |</div>
+<div class="line">tagui_helper     | generated normal TagUI command to run  |</div>
+<div class="line">tagui_helper.cmd | same as above but for Windows platform |</div>
+</div>
+<div class="line-block">
+<div class="line">Miscellaneous Files | Purpose                                      |</div>
+<div class="line">:—————— | :——————————————- |</div>
+<div class="line">end_processes       | kill all processes of TagUI and integrations |</div>
+<div class="line">end_processes.cmd   | same as above but for Windows platform       |</div>
+<div class="line">tagui_datatable.csv | temporary datatable internal representation  |</div>
+<div class="line">transpose.php       | transpose conventional datatable csv file    |</div>
+<div class="line">tagui_report.php    | to track run results and keep html logs      |</div>
+<div class="line">tagui_report.csv    | run results tracked using report option      |</div>
+<div class="line">sleep.php           | allow adding execution pause on Windows      |</div>
+</div>
+<div class="line-block">
+<div class="line">User-defined Files | Purpose                                       |</div>
+<div class="line">:—————– | :——————————————– |</div>
+<div class="line">tagui_local.csv    | local repository (put in same folder as flow) |</div>
+<div class="line">tagui_global.csv   | global repository (put in tagui/src folder)   |</div>
+<div class="line">tagui_local.js     | local functions (put in same folder as flow)  |</div>
+<div class="line">tagui_global.js    | global functions (put in tagui/src folder)    |</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tools.html" class="btn btn-neutral float-left" title="Helper Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ken Soh, Siow Yi Sheng
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
