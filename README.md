@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/kelaberetiv/TagUI/new_logo/src/media/tagui_logo.png" height="111" align="right">
+<img src="https://raw.githubusercontent.com/kelaberetiv/TagUI/develop/src/media/tagui_logo.png" height="111" align="right">
 
 # TagUI
 
@@ -14,13 +14,13 @@ In TagUI language, you use _steps_ like `click` and `type` and interact with _id
 
 Here's what a simple TagUI flow looks like:
 
-.. code-block:: none
+```
+https://www.typeform.com
 
-    https://www.typeform.com
+click login
+type username as user@gmail.com
+type password as 12345678
+click btnlogin
 
-    click login
-    type username as user@gmail.com
-    type password as 12345678
-    click btnlogin
-
-    download https://admin.typeform.com/xxx to report.csv
+download https://admin.typeform.com/xxx to report.csv
+```
