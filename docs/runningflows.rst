@@ -1,6 +1,11 @@
 Usage
 ====================
 
+Running flows
+--------------
+
+Run TagUI in the Command Prompt/Terminal like this: ``tagui my_flow.tag``
+
 Running flows with options
 ---------------------------
 
@@ -15,7 +20,7 @@ report
     Tracks flow run result in ``tagui/src/tagui_report.csv`` and saves html log of automation execution.
 
 my_datatable.csv
-    Uses the specified csv file as the datatable for batch automation of many records.
+    Uses the specified csv file as the datatable. See :ref:`_datatables`.
 
 speed
     Runs a datatable flow, skipping the default 3s delay and restarting of Chrome between datatable iterations.
@@ -25,74 +30,52 @@ See :doc:`other deprecated options </dep_options>`.
 Running flows as desktop icons
 --------------------------------
 
-To do that on Windows, create a .cmd or .bat file with contents like the following, which goes to the directory where you want to run the automation, and run tagui command on the file with your specified options. Double-clicking the .cmd or .bat file will start automation.
+You can run flows just by double-clicking a file.
+
+On Windows, create a ``.cmd`` or ``.bat`` file with contents like below. 
 
 ::
 
     @echo off
-    c:
-    cd c:\folder
-    tagui filename quiet speed chrome
+    cd c:\path\to\my\flow
+    tagui my_flow.tag
 
-To do that on macOS / Linux, create a file with contents like the following, which goes to the directory where you want to run the automation, and run tagui command on the file with your specified options. You will need to use the command chmod 700 on the file to give it execute permissions, so that it can be run by double-clicking on it.
+On macOS/Linux, create a ``.sh`` file with contents like below and run ``chmod 700 my_file.sh``.
 
 ::
 
     cd /Users/username/folder
-    tagui filename quiet speed chrome
-
-Create log files for debugging
----------------------------------
-
-To create log files create an empty file `tagui_logging` in tagui/src folder.
-
-After each automation run, a .log file will be created to store output of the execution, a .js file is the generated JavaScript file, a .raw is the expanded flow after reading in any module sub-scripts that are called in that flow.
-
+    tagui my_flow.tag
 
 Running flows on a fixed schedule
 --------------------------------------
 
-To schedule an automation flow with crontab (for macOS/Linux), for example at 8am daily
+It is often useful to run flows automatically on a fixed schedule: monthly; weekly; daily or even every 5 minutes.
 
-::
+On Windows, `use the Task Scheduler <https://www.digitalcitizen.life/how-create-task-basic-task-wizard>`_.
 
-    0 8 * * * /full_path/tagui/src/tagui flow_filename option(s)
-
-For Windows, use Task Scheduler (search schedule from Start Menu) or something like [Z-Cron](https://www.z-cron.com)
-
-Sample flows
-----------------
-
-TagUI includes the following automation flow samples ([tagui/src/samples folder](https://github.com/kelaberetiv/TagUI/tree/master/src/samples))
-
-=============== ==============================================================
- Flow Sample                          Purpose
---------------- --------------------------------------------------------------
-1_yahoo         searches github on Yahoo and captures screenshot of results
-2_twitter       goes to a Twitter page and saves some profile information
-3_github        goes to a GitHub page and downloads the repository file
-4_conditions    goes through examples of using conditions in natural language
-5_repositories  shows using repositories on Russian social media site VK.com
-6_datatables    set of flows uses datatables to retrieve and act on GitHub info
-7_testing       shows how to use check step assertions for CI/CD integration
-8_hastebin      used by upload option to upload flow result to hastebin.com
-9_misc          shows how to use steps popup, frame, dom, js, { and } block
-a_facedetect    uses face recognition to detect profile images on webpages
-b_visualoutlook uses visual recognition for desktop MS Outlook email sending
-c_chineseflow   run flow in other languages (first, change src/tagui_config.txt)
-=============== ==============================================================
+On macOS/Linux, `use crontab <https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/>`_.
 
 
-Storing run results
------------------------
+Storing flow run results
+-------------------------
 
-- when the ``report`` option is used, TagUI will save run results to tagui/src/tagui_report.csv
-- this can be useful for audit, personal tracking or measuring time savings
-- html logs will also be generated to store the full execution sequences and outcomes
+When the ``report`` option is used, TagUI will save flow run results to ``tagui/src/tagui_report.csv``. HTML logs will also be generated to store the full execution sequences and outcomes.
 
-\#|AUTOMATION FLOW|START TIME|FINISH TIME|ERROR STATUS|LOG FILE
-:-|:--------------|:---------|:----------|:-----------|:-------
-1 | /Users/kensoh/Desktop/download_flow | Sun Apr 07 2019 17:33:58 GMT+0800 (+08) | 32.1 | SUCCESS | /Users/kensoh/Desktop/download_flow_1.html
-2 | /Users/kensoh/Desktop/upload_flow | NOT STARTED | NOT FINISHED | [LINE 1] cannot understand step self-destruct | /Users/kensoh/Desktop/upload_flow_2.html
-3 | /Users/kensoh/Desktop/update_flow | NOT STARTED | NOT FINISHED | [LINE 1] cannot understand step reboot computer | /Users/kensoh/Desktop/update_flow_3.html
-4 | /Users/kensoh/Desktop/booking_flow | Sun Apr 07 2019 17:39:00 GMT+0800 (+08) | NOT FINISHED | cannot find confirm_booking | /Users/kensoh/Desktop/booking_flow_4.html
+=== ==================================== ========================================= ============== ================================================== ======================================================
+ #   Automation Flow                       Start Time                                Finish Time   Error Status                                       Log File
+--- ------------------------------------ ----------------------------------------- -------------- -------------------------------------------------- ------------------------------------------------------
+1   /Users/kensoh/Desktop/download_flow    Sun Apr 07 2019 17:33:58 GMT+0800 (+08)       32.1        SUCCESS                                          /Users/kensoh/Desktop/download_flow_1.html
+2   /Users/kensoh/Desktop/upload_flow      NOT STARTED                               NOT FINISHED   [LINE 1] cannot understand step self-destruct     /Users/kensoh/Desktop/upload_flow_2.html
+3   /Users/kensoh/Desktop/update_flow      NOT STARTED                               NOT FINISHED   [LINE 1] cannot understand step reboot computer   /Users/kensoh/Desktop/update_flow_3.html
+4   /Users/kensoh/Desktop/booking_flow     Sun Apr 07 2019 17:39:00 GMT+0800 (+08)   NOT FINISHED   cannot find confirm_booking                       /Users/kensoh/Desktop/booking_flow_4.html
+=== ==================================== ========================================= ============== ================================================== ======================================================
+
+Create log files for debugging
+---------------------------------
+
+To do advanced debugging, you can create log files when running flows by creating an empty ``tagui_logging`` file in ``tagui/src/``.
+
+- ``my_flow.tag.log`` stores output of the execution. 
+- ``my_flow.tag.js`` is the generated JavaScript file that was run.
+- ``my_flow.tag.raw`` is the expanded flow after parsing modules.

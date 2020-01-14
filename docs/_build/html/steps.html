@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Step reference &mdash; TagUI 6.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced flows" href="advanced.html" />
+    <link rel="prev" title="Writing Flows" href="writingflows.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TagUI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Download and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningflows.html">Running flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writingflows.html">Writing flows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Step reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Helper tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How it works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TagUI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Step reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/steps.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="step-reference">
+<h1>Step reference<a class="headerlink" href="#step-reference" title="Permalink to this headline">¶</a></h1>
+<p>The steps you can use in TagUI are listed here.</p>
+<p>Basic Step|Parameters (separator in bold)|Purpose
+:———<a href="#id1"><span class="problematic" id="id2">|:-----------------------------|</span></a>:——
+http(s)://<a href="#id3"><span class="problematic" id="id4">|just enter full url of webpage (\`variable\` for variable)|go to specified webpage
+click|element to click|click on an element
+rclick|element to right-click|right-click on an element
+dclick|element to double-click|double-click on an element
+hover|element to hover|move cursor to element
+type|element ***as*** text ([enter] = enter, [clear] = clear field)|enter element as text
+select|element to select ***as*** option value ([clear] = clear selection)|choose dropdown option
+read|element to read (page = webpage) ***to*** variable name|fetch element text to variable
+show|element to read (page = webpage, ie raw html) |print element text to output
+save|element (page = webpage) ***to*** optional filename|save element text to file
+snap|element (page = webpage) ***to*** optional filename|save screenshot to file
+snap (pdf)|page ***to*** filename.pdf (headless Chrome / PhantomJS)|save webpage to basic pdf
+load|filename ***to*** variable name|load file content to variable
+echo|text (in quotation marks) and variables|print text/variables to output
+dump|text (in quotation marks) and variables ***to*** optional filename|save text/variables to file
+write|text (in quotation marks) and variables ***to*** optional filename|append text/variables to file
+variable_name|</span></a> = value (for text, put in quotes, use + to concat)|define variable variable_name
+// (on new line)|user comments (ignored during execution)|add user comments
+ask|question or instruction for user (reply stored in ask_result)|ask user for input
+live|try steps or code interactively for Chrome / visual automation|enter live mode ([Firefox not yet](<a class="reference external" href="https://github.com/laurentj/slimerjs/issues/639">https://github.com/laurentj/slimerjs/issues/639</a>))</p>
+<p>Pro Step|Parameters (separator in bold)|Purpose
+:——-<a href="#id5"><span class="problematic" id="id6">|:-----------------------------|</span></a>:——
+tagui|relative or absolute filename (see MODULES section)|run another tagui flow
+keyboard|keystrokes and modifiers (using visual automation)|send keystrokes to screen
+mouse|down or up (using sikuli visual automation)|send mouse event to screen
+table|element (XPath selector only) <strong>*to*</strong> optional filename.csv|save basic html table to csv
+wait|optional time in seconds (default is 5 seconds)|explicitly wait for some time
+check|condition <strong>&amp;#124;</strong> text (in quotes) if true <strong>&amp;#124;</strong> text (in quotes) if false|check condition and print result
+upload|element (CSS selector only) <strong>*as*</strong> filename to upload|upload file to website
+download|url to download <strong>*to*</strong> filename to save|download from url to file
+receive|url keyword to watch <strong>*to*</strong> filename to save|receive resource to file
+frame|frame name <strong>&amp;#124;</strong> subframe name if any|next step or block in frame/subframe
+popup|url keyword of new tab window to look for|next step or block in new tab window
+{ and }|use { to start block and } to end block (on new line)|define block of steps and code
+api|full url (including parameters) of api call|call api &amp; save response to api_result
+run|OS shell command including parameters|run OS command &amp; save to run_result
+dom|javascript code for document object model|run code in dom &amp; save to dom_result
+js|javascript statements (skip auto-detection)|treat as JS code explicitly
+r|R statements for big data and machine learning|run R statements &amp; save to r_result
+py|python code for big data and machine learning|run python code &amp; save to py_result
+vision|custom visual automation commands|run custom sikuli commands
+timeout|time in seconds before step errors out|change auto-wait timeout</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced flows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="writingflows.html" class="btn btn-neutral float-left" title="Writing Flows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ken Soh, Siow Yi Sheng
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

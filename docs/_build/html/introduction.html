@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Features &mdash; TagUI 6.0.0 documentation</title>
+  <title>Introduction &mdash; TagUI 6.0.0 documentation</title>
   
 
   
@@ -86,10 +86,9 @@
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Download and Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runningflows.html">Running flows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writingflows.html">Writing flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced flows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Helper tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How It Works</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html#architecture-diagram">Architecture diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html#description-of-files">Description of files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How it works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -136,7 +135,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Features</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,15 +154,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="features">
-<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Automates web, mouse and keyboard interactions for desktops</p></li>
-<li><p>Uses flows written in natural language</p></li>
-<li><p>Free</p></li>
-<li><p>Easy to setup and use</p></li>
-<li><p>Works on Windows, macOS and Linux</p></li>
-</ul>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Write flows (scripts) in simple TagUI language and automate your web, mouse and keyboard interactions on the desktop.</p>
+<p>TagUI is free to use and open-source. It’s easy to setup and use and works on Windows, macOS and Linux.</p>
+<p>In TagUI language, you use <em>steps</em> like <code class="docutils literal notranslate"><span class="pre">click</span></code> and <code class="docutils literal notranslate"><span class="pre">type</span></code> and interact with <em>identifiers</em>.</p>
+<p>Here’s what a simple TagUI flow looks like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://www.typeform.com
+
+click login
+type username as user@gmail.com
+type password as 12345678
+click btnlogin
+
+download https://admin.typeform.com/xxx to report.csv
+</pre></div>
+</div>
 </div>
 
 

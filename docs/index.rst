@@ -11,7 +11,10 @@ An open-source command-line RPA tool.
    Download and Setup<setup>
    Running flows<runningflows>
    Writing flows<writingflows>
+   Step reference<steps>
+   Advanced flows<advanced>
    Helper tools<tools>
+   
    How it works<howitworks>
    Frequently Asked Questions<faq>
    

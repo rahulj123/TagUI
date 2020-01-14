@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Usage" href="runningflows.html" />
-    <link rel="prev" title="Features" href="introduction.html" /> 
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,19 +84,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Download and Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#recommended-setup">Recommended setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-setup-for-windows">Recommended setup for Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-setup-for-macos-linux">Recommended setup for macOS/Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-your-first-flow">Running your first flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#npm-installation">npm installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cutting-edge-version">Cutting edge version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="runningflows.html">Running flows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writingflows.html">Writing flows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steps.html">Step reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced flows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Helper tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How It Works</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html#architecture-diagram">Architecture diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howitworks.html#description-of-files">Description of files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howitworks.html">How it works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 </ul>
 
@@ -164,25 +163,34 @@
             
   <div class="section" id="download-and-setup">
 <h1>Download and Setup<a class="headerlink" href="#download-and-setup" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="recommended-setup">
-<h2>Recommended setup<a class="headerlink" href="#recommended-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="recommended-setup-for-windows">
+<h2>Recommended setup for Windows<a class="headerlink" href="#recommended-setup-for-windows" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Download TagUI v6.0.0 for:</p></li>
-</ol>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Windows.zip">Windows</a></p></li>
-<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_macOS.zip">macOS</a></p></li>
-<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Linux.zip">Linux</a></p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>Unzip to <code class="docutils literal notranslate"><span class="pre">C:\</span></code> on Windows, or your desktop on macOS, or <code class="docutils literal notranslate"><span class="pre">/home/your_userid</span></code> on Linux.</p></li>
-<li><p><a class="reference external" href="https://www.java.com/en/download/">Install Java</a> (if not yet installed).</p></li>
+<li><p><a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Windows.zip">Download TagUI v6.0.0 for Windows</a>.</p></li>
+<li><p>Unzip the contents to <code class="docutils literal notranslate"><span class="pre">C:\</span></code>.</p></li>
+<li><p><a class="reference external" href="https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi">Install OpenJDK for Windows</a>).</p></li>
 <li><p><a class="reference external" href="https://www.google.com/chrome/">Install Chrome</a> (if not yet installed).</p></li>
-<li><p>To make the <code class="docutils literal notranslate"><span class="pre">tagui</span></code> command always available:</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">setx</span> <span class="pre">path</span> <span class="pre">&quot;%path%;c:\tagui\src&quot;</span></code> in Command Prompt.</p></li>
 </ol>
+<p><strong>Troubleshooting</strong></p>
 <ul class="simple">
-<li><p>For macOS/Linux, run <code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span> <span class="pre">/your_tagui_path/tagui/src/tagui</span> <span class="pre">/usr/local/bin/tagui</span></code> in Terminal.</p></li>
-<li><p>For Windows, run <code class="docutils literal notranslate"><span class="pre">setx</span> <span class="pre">path</span> <span class="pre">&quot;%path%;c:\tagui\src&quot;</span></code> in Command Prompt.</p></li>
+<li><p>If you see ‘MSVCR110.dll is missing’ error, <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=30679">install Visual C++ Redistributable</a> (choose vcredist_x86.exe).</p></li>
+<li><p>If you cannot unzip to <code class="docutils literal notranslate"><span class="pre">C:\</span></code>, unzip to your desktop.</p></li>
+</ul>
+</div>
+<div class="section" id="recommended-setup-for-macos-linux">
+<h2>Recommended setup for macOS/Linux<a class="headerlink" href="#recommended-setup-for-macos-linux" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Download TagUI v6.0.0 (<a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_macOS.zip">macOS</a>, <a class="reference external" href="https://github.com/kelaberetiv/TagUI/releases/download/v5.11.0/TagUI_Linux.zip">Linux</a>).</p></li>
+<li><p>Unzip the contents to your desktop on macOS, or <code class="docutils literal notranslate"><span class="pre">/home/your_userid</span></code> on Linux.</p></li>
+<li><p>Install OpenJDK (<a class="reference external" href="https://corretto.aws/downloads/latest/amazon-corretto-8-x64-macos-jdk.pkg">macOS</a>, <a class="reference external" href="https://corretto.aws/downloads/latest/amazon-corretto-8-x64-linux-jdk.tar.gz">Linux</a>).</p></li>
+<li><p><a class="reference external" href="https://www.google.com/chrome/">Install Chrome</a> (if not yet installed).</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span> <span class="pre">/your_tagui_path/tagui/src/tagui</span> <span class="pre">/usr/local/bin/tagui</span></code> in Terminal.</p></li>
+</ol>
+<p><strong>Troubleshooting</strong></p>
+<ul class="simple">
+<li><p>For newer macOS versions, if you get a <code class="docutils literal notranslate"><span class="pre">dyld:</span> <span class="pre">Library</span> <span class="pre">not</span> <span class="pre">loaded</span></code> error, <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/86">install OpenSSL in this way</a>. macOS Catalina update has introduced tighter security controls, see solutions for the <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/601">PhantomJS</a> and <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/598">Java popups</a>.</p></li>
+<li><p>Linux distributions which do not have PHP pre-installed (eg. Ubuntu) must install PHP separately.</p></li>
 </ul>
 </div>
 <div class="section" id="running-your-first-flow">
@@ -197,25 +205,9 @@
 </div>
 <p>Congratulations, you have run your first TagUI flow!</p>
 </div>
-<div class="section" id="npm-installation">
-<h2>npm installation<a class="headerlink" href="#npm-installation" title="Permalink to this headline">¶</a></h2>
-<p>Alternatively, you can install TagUI via npm:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="n">tagui</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="cutting-edge-version">
 <h2>Cutting edge version<a class="headerlink" href="#cutting-edge-version" title="Permalink to this headline">¶</a></h2>
-<p>To use the latest features and fixes, first download TagUI with the recommended setup above, then <a class="reference external" href="https://github.com/kelaberetiv/TagUI/archive/develop.zip">download the cutting edge version</a> and overwrite the files in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>If you see ‘MSVCR110.dll is missing’ error, <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=30679">install this from Microsoft website</a> (choose vcredist_x86.exe) - this file is required to run the Windows PHP engine packaged with TagUI. Some IT policies restrict TagUI from writing to c:tagui and working properly, in that case please unzip to user desktop folder.</p></li>
-<li><p>For newer macOS versions, if you get a ‘dyld: Library not loaded’ error, <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/86">install OpenSSL in this way</a>. macOS Catalina update has introduced tighter security controls, see solutions for the <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/601">PhantomJS</a> and <a class="reference external" href="https://github.com/kelaberetiv/TagUI/issues/598">Java popups</a>.</p></li>
-<li><p>For some flavours of Linux (Ubuntu for example) which do not have PHP pre-installed, google how to install PHP accordingly (eg Ubuntu, apt-get install php). Most Linux distributions would already come with PHP.</p></li>
-<li><p>If you Ctrl+C to break a TagUI automation, you can use tagui/src/end_processes command (for macOS/Linux) or end_processes.cmd (for Windows) to kill any dead processes of TagUI integrations (Chrome, SikuliX, Python etc)</p></li>
-</ul>
+<p>To use the latest features and fixes, first download TagUI with the recommended setup above, then <a class="reference external" href="https://github.com/kelaberetiv/TagUI/archive/develop.zip">download the cutting edge version</a> and overwrite the files in the <code class="docutils literal notranslate"><span class="pre">tagui/src/</span></code> folder.</p>
 </div>
 </div>
 
@@ -230,7 +222,7 @@
         <a href="runningflows.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
